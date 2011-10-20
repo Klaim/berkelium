@@ -40,7 +40,7 @@ template <class T> class AutoSingleton {
 public:
     static T& getSingleton() {
         if (sInstance.get()==NULL)  {
-            throw std::exception();
+            throw std::exception("Berkelium::AutoSingleton::getSingleton() : FAILED -> Instance not created!");
         }
         return *static_cast<T*>(sInstance.get());
     }
